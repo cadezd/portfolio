@@ -1,0 +1,20 @@
+[
+  {
+    "name": "PINS Interpreter",
+    "description": "Developed during my second year of study, it's an interpreter for the PINS programming language. Created as part of my Compilers and Virtual Machines coursework.",
+    "image": "../images/projects/pins.webp",
+    "link": "https://github.com/cadezd/PINS-Compiler"
+  },
+  {
+    "name": "Corpora Viewer",
+    "description": "Corpora Viewer is web application enabling users to conduct advanced searches through parliamentary sitting records. With functionalities such as lemma, keyword, phrase, and cross-language searches, it seamlessly facilitates detailed analysis of legislative discourse.",
+    "image": "../images/projects/corpora-viewer.webp",
+    "link": "https://parlavis.si/#/"
+  },
+  {
+    "name": "ExpenseMate",
+    "description": "ExpenseMate is an Android app that empowers users to effortlessly track their cash inflow and outflow. It stores transactions and provides simple visual analytics to help monitor spending habits and financial trends.",
+    "image": "../images/projects/expensemate.webp",
+    "link": "https://github.com/cadezd/ExpenseMate"
+  }
+]

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline_animation {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.underline_animation:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0%;
+    background-color: #fefefe;
+    transition: width .3s;
+}
+
+.underline_animation:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.close {
+    transform: translate3d(0px, -100vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: opacity 1s, transform 1s;
+}
+
+.open {
+    display: flex;
+    transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: opacity 1s, transform 1s;
+}

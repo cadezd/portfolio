@@ -1,0 +1,12 @@
+[
+  {
+    "school": "University of Ljubljana",
+    "description": "At the University of Ljubljana, Faculty for Computer and Information Science, I acquired comprehensive programming knowledge, spanning from basics to advanced concepts.",
+    "image": "../images/schools/ul.webp"
+  },
+  {
+    "school": "Technological University Dublin",
+    "description": "In my third year, I undertook a full-year Erasmus exchange at TU Dublin, deepening my CS expertise with immersive learning opportunities, enriching my understanding of CS in different academic environment.",
+    "image": "../images/schools/tud.webp"
+  }
+]

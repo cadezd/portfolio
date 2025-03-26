@@ -1,0 +1,12 @@
+[
+  {
+    "company": "Simpos d.o.o.",
+    "description": "At Simpos d.o.o., a motor oil distribution company, I developed programs to speed-up business processes and cut costs, focusing on PDF processing solutions to enhance efficiency.",
+    "image": "../images/companies/simpos.webp"
+  },
+  {
+    "company": "Mapetrol d.o.o.",
+    "description": "At Mapetrol d.o.o., a motor oil manufacturing company, I developed software solutions to optimize business processes and minimize costs, with a focus on PDF processing solutions for heightened productivity.",
+    "image": "../images/companies/mapetrol.webp"
+  }
+]

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="style/output.css">
+    <!-- Alpine JS-->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
+    <title>David Čadež | Portfolio</title>
+</head>
+<body class="bg-black-500 text-white-300 font-Satoshi text-[1rem] font-light leading-[160%]">
+    <!-- (Hidden) Navigation -->
+    <div id="menu"
+         role="menu"
+         aria-hidden="true"
+         class="z-50 bg-orange-300 hidden flex-col justify-between items-stretch px-6 py-8 sm:px-12 sm:py-12 fixed top-0 right-0 bottom-0 left-0 close">
+        <div class="flex flex-row justify-between items-center">
+            <a href="#" role="menuitem">
+                <img src="images/logo.svg" class="h-6 md:h-8" alt="home page"/>
+            </a>
+            <button id="close-menu-btn" aria-controls="menu" class="font-Syne uppercase text-2xl p-4" role="menuitem">
+                Close
+            </button>
+        </div>
+        <nav class="h-[70%]">
+            <ul class="w-full h-full flex flex-col justify-around  gap-5">
+                <li class="border-b-2 border-white-300 lg:border-b-0">
+                    <a class="font-Syne no-underline text-[2.2rem] sm:text-[3rem] md:text-[3rem] lg:text-[4.2vw] font-bold leading-[100%]"
+                       href="#what-i-do"
+                       role="menuitem"
+                    >01 - What I do</a>
+                </li>
+                <li class="border-b-2 border-white-300 lg:border-b-0">
+                    <a class="font-Syne no-underline text-[2.2rem] sm:text-[3rem] md:text-[3rem] lg:text-[4.2vw] font-bold leading-[100%]"
+                       href="#skills"
+                       role="menuitem">02 - Skills</a>
+                </li>
+                <li class="border-b-2 border-white-300 lg:border-b-0">
+                    <a class="font-Syne no-underline text-[2.2rem] sm:text-[3rem] md:text-[3rem] lg:text-[4.2vw] font-bold leading-[100%]"
+                       href="#projects"
+                       role="menuitem">03 - Projects</a>
+                </li>
+                <li class="border-b-2 border-white-300 lg:border-b-0">
+                    <a class="font-Syne no-underline text-[2.2rem] sm:text-[3rem] md:text-[3rem] lg:text-[4.2vw] font-bold leading-[100%]"
+                       href="#education"
+                       role="menuitem">04 - Education</a>
+                </li>
+                <li class="border-b-2 border-white-300 lg:border-b-0">
+                    <a class="font-Syne no-underline text-[2.2rem] sm:text-[3rem] md:text-[3rem] lg:text-[4.2vw] font-bold leading-[100%]"
+                       href="#experience"
+                       role="menuitem">05 - Experience</a>
+                </li>
+                <li class="border-b-2 border-white-300 lg:border-b-0">
+                    <a class="font-Syne no-underline text-[2.2rem] sm:text-[3rem] md:text-[3rem] lg:text-[4.2vw] font-bold leading-[100%]"
+                       href="#contact"
+                       role="menuitem">06 - Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex flex-col-reverse lg:flex-row justify-between gap-2">
+            <div>
+                <p class="font-Syne text-center sm:text-left tracking-[.2rem] text-base sm:text-l md:text-xl uppercase">
+                    Copyright © 2024 David Čadež.</p>
+            </div>
+            <div class="flex flex-row justify-center sm:justify-start  gap-6 md:gap-16 lg:gap-6">
+                <div>
+                    <a class="font-Syne tracking-[.2rem] text-base sm:text-l md:text-xl uppercase underline_animation"
+                       href="https://github.com/cadezd/"
+                       role="menuitem"
+                       target="_blank">GitHub</a>
+                </div>
+                <div>
+                    <a class="font-Syne tracking-[.2rem] text-base sm:text-l md:text-xl uppercase underline_animation"
+                       href="https://linkedin.com/in/david-čadež"
+                       role="menuitem"
+                       target="_blank">Linked in</a>
+                </div>
+                <div>
+                    <a class="font-Syne tracking-[.2rem] text-base sm:text-l md:text-xl uppercase underline_animation"
+                       href="https://drive.google.com/file/d/1s3bKdzcL3Y8z1bcEBxo6WMMxILjgEHw8/view"
+                       role="menuitem"
+                       target="_blank">Résumé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="relative flex flex-col h-screen max-w-screen-xxl overflow-hidden">
+        <div class="fixed top-0 left-0 bottom-auto right-0 z-10">
+            <div class="bg-gradient-to-b from-black-500 from-10% max-w-screen-xxl flex flex-wrap items-center justify-between mx-auto p-8">
+                <a href="#">
+                    <img src="images/logo.svg" class="h-6 md:h-8" alt="home page"/>
+                </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 place-items-center">
+                    <button id="open-menu-btn"
+                            class="font-Syne uppercase text-2xl p-4 underline_animation"
+                            aria-haspopup="menu"
+                            aria-controls="menu"
+                            aria-expanded="false">
+                        Menu
+                    </button>
+                    <a href="#contact"
+                       class="font-Syne bg-dark-grey-200 hover:bg-dark-grey-150 rounded text-2xl hidden md:block md:py-4 md:p-6 primary-button">CONTACT</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="h-full px-8 py-32 grid grid-cols-1 content-start md:absolute md:content-center">
+            <div>
+                <h1 class="font-Syne font-bold leading-[110%] text-[4.5rem] md:text-[6rem] lg:text-[7vw]">DΛVID<br><span
+                        class="text-orange-300">ČΛDEŽ</span></h1>
+            </div>
+            <!-- Banner - mobile -->
+            <div class="-z-10 w-full object-cover absolute bottom-0 right-0 md:hidden">
+                <img
+                        class="max-w-full align-middle inline-block bg-gradient-to-b from-black-500 from-10% "
+                        sizes="100vw"
+                        loading="lazy"
+                        src="images/banner-mobile.webp"
+                        srcset="images/banner-mobile.webp 500w, images/banner-mobile.webp 800w, images/banner-mobile.webp 1080w"
+                        alt=""
+                        role="presentation"
+                />
+            </div>
+        </div>
+
+        <!-- Banner - regular -->
+        <div>
+            <img
+                    class="hidden -z-10  md:block md:absolute md:w-full md:h-full md:object-cover md:top-0 md:bottom-0 md:right-0 md:left-0"
+                    sizes="100vw"
+                    loading="lazy"
+                    src="images/banner.webp"
+                    alt=""
+                    role="presentation"
+            />
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="max-w-screen-xxl">
+        <!-- Slider (clients) -->
+        <section aria-hidden="true">
+            <div
+                    x-data="{}"
+                    x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+                    class="w-full inline-flex flex-nowrap overflow-hidden border-y-[3px] border-dark-grey-200">
+                <ul x-ref="logos"
+                    class="py-6 flex justify-center items-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp"/>
+                    </li>
+                </ul>
+                <ul x-ref="logos"
+                    class="py-6 flex justify-center items-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/simpos.webp" alt=""/>
+                    </li>
+                    <li>
+                        <img class="h-11 object-cover" src="images/companies/mapetrol.webp" alt=""/>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About me -->
+        <section id="what-i-do" aria-labelledby="what-i-do-heading">
+            <div class="px-8 pt-24 lg:pt-32 flex flex-col-reverse gap-4 lg:grid lg:grid-cols-[1.5fr_2px_.5fr] lg:grid-rows-* lg:gap-16 lg:auto-cols-fr">
+                <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[3vw]">
+                    As a <span class="text-orange-300">CS engineer</span> I am passionate about learning to
+                    turn everyday challenges into <span class="text-orange-300">innovative solutions</span> through
+                    code.
+                </h3>
+                <div class="hidden lg:block lg:bg-dark-grey-200">
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h2 id="what-i-do-heading"
+                        class="font-Syne font-normal leading-[130%] uppercase text-2xl tracking-[.2rem] mb-4">
+                        What I
+                        do</h2>
+                    <div class="block min-w-full h-[2px] mb-12 bg-dark-grey-200 lg:hidden"></div>
+                    <div class="flex flex-wrap justify-start gap-4">
+                        <a href="https://github.com/cadezd/"
+                           target="_blank">
+                            <img class="object-cover h-12" src="images/github.webp" alt="git-hub"/>
+                        </a>
+                        <a href="https://linkedin.com/in/david-čadež"
+                           target="_blank">
+                            <img class="object-cover h-12" src="images/linkedin.webp" alt="linkedin"/>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1s3bKdzcL3Y8z1bcEBxo6WMMxILjgEHw8/view"
+                           target="_blank">
+                            <img class="object-cover h-12" src="images/cv.webp" alt="résumé"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" aria-labelledby="skills-heading">
+            <div class="px-8 pt-24 lg:pt-32">
+                <h2 id="skills-heading"
+                    class="font-Syne font-normal uppercase  leading-[130%] text-2xl border-b-[3px] border-dark-grey-200 tracking-[.2rem] pb-4 mb-8">
+                    Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-* gap-8 auto-cols-fr">
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">Python</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">Java</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">SQL</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">JavaScript</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">HTML</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">CSS</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">Interpreters</h3>
+                    </div>
+                    <div class="flex flex-row justify-start gap-6 align-middle">
+                        <img src="images/point.svg" alt="" role="presentation">
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[2.4vw]">Android dev.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="px-8 pt-24 lg:pt-32">
+                <h2 id="projects-heading"
+                    class="font-Syne font-normal uppercase leading-[130%] text-2xl border-b-[3px] border-dark-grey-200 tracking-[.2rem] pb-4 mb-8">
+                    Projects</h2>
+
+                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-3 grid-rows-* gap-10 md:gap-8 auto-cols-fr">
+                    <!-- Projects will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" aria-labelledby="education-heading">
+            <div class="px-8 pt-24 lg:pt-32">
+                <h2 id="education-heading"
+                    class="font-Syne font-normal uppercase leading-[130%] text-2xl border-b-[3px] border-dark-grey-200 tracking-[.2rem] pb-4 mb-8">
+                    Education</h2>
+                <div class="grid lg:grid-cols-[1fr_2px_1fr] grid-rows-* gap-16 auto-cols-fr">
+                    <div>
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[3vw]">
+                            I acquired coding <span class="text-orange-300">knowledge</span> from top institutions,
+                            ready to <span class="text-orange-300">innovate</span> in tech.
+                        </h3>
+                    </div>
+                    <div class="w-full hidden bg-dark-grey-200 lg:block"></div>
+                    <div id="education-container" class="grid grid-rows-[1fr_2px_1fr] auto-cols-fr gap-16 content-stretch">
+                        <!-- Education will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" aria-labelledby="experience-heading">
+            <div class="px-8 pt-24 lg:pt-32">
+                <h2 id="experience-heading"
+                    class="font-Syne font-normal uppercase leading-[130%] text-2xl border-b-[3px] border-dark-grey-200 tracking-[.2rem] pb-4 mb-8">
+                    Experience</h2>
+                <div class="grid lg:grid-cols-[1fr_2px_1fr] grid-rows-* gap-16 auto-cols-fr">
+                    <div>
+                        <h3 class="font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[3vw]">
+                            Through <span class="text-orange-300">work experiences</span> I have gained valuable skills
+                            and learned to take on
+                            <span class="text-orange-300">responsibilities.</span>
+                        </h3>
+                    </div>
+                    <div class="w-full hidden bg-dark-grey-200 lg:block"></div>
+                    <div id="experience-container" class="grid grid-rows-[1fr_2px_1fr] auto-cols-fr gap-16 content-stretch">
+                        <!-- Experiences will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="px-8 pt-24 lg:pt-32">
+                <h2 id="contact-heading"
+                    class="font-Syne font-normal uppercase leading-[130%] text-2xl border-b-[3px] border-dark-grey-200 tracking-[.2rem] pb-4 mb-8">
+                    Contact</h2>
+                <div class="grid lg:grid-cols-2 grid-rows-* gap-16 auto-cols-fr">
+                    <div class=" grid grid-cols-1 grid-rows-* lg:grid-rows-[1fr_.5fr_2.5fr] gap-16 lg:gap-8 auto-cols-fr lg:border-b-[3px] lg:border-dark-grey-200">
+                        <div>
+                            <h3 class="mb-2 font-Syne font-bold leading-[120%] text-[2.5rem] lg:text-[3vw]">
+                                Lets have a <span class="text-orange-300">chat!</span>
+                            </h3>
+                            <h4 class="mb-1 font-Syne font-normal leading-[120%] text-[1.9rem] lg:text-[2vw]">If you are
+                                interested in
+                                working together, feel free to reach out via e-mail.</h4>
+                        </div>
+                        <div class="grid grid-cols-3 grid-rows-* gap-4 auto-cols-fr">
+                            <div class="text-left">
+                                <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                                   href="https://github.com/cadezd/"
+                                   target="_blank">GitHub</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                                   href="https://linkedin.com/in/david-čadež"
+                                   target="_blank">Linked
+                                    in</a>
+                            </div>
+                            <div class="text-right">
+                                <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                                   href="https://drive.google.com/file/d/1s3bKdzcL3Y8z1bcEBxo6WMMxILjgEHw8/view"
+                                   target="_blank">Résumé</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-1 grid-rows-* gap-6 sm:gap-10 auto-cols-frs">
+                                <div class="flex flex-row justify-start gap-4 align-middle">
+                                    <h4 class="font-Syne tracking-[.2rem] font-normal leading-[120%] text-xl sm:text-[1.8rem] lg:text-[2vw]">
+                                        David
+                                        Čadež</h4>
+                                </div>
+                                <div class="flex flex-row justify-start gap-4 align-middle">
+                                    <h4 class="font-Syne tracking-[.2rem] font-normal leading-[120%] text-xl sm:text-[1.8rem] lg:text-[2vw]">
+                                        Nova
+                                        Gorica,
+                                        Slovenia</h4>
+                                </div>
+                                <div class="flex flex-row justify-start gap-4 align-middle">
+                                    <h4 class="font-Syne tracking-[.2rem] font-normal leading-[120%] text-xl sm:text-[1.8rem] lg:text-[2vw]">
+                                        &#100;&#097;&#118;&#105;&#100;&#046;&#099;&#097;&#100;&#101;&#122;&#056;&#057;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="object-cover w-full aspect-square" src="images/contact.webp" alt=""
+                             role="presentation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-screen-xxl">
+        <div class="px-8 py-16 lg:py-20">
+            <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] grid-rows-* auto-cols-fr gap-8">
+                <div class="col-span-1 md:col-span-2 md:mb-16 lg:col-span-1 lg:mb-0">
+                    <p class="font-Syne mb-4 tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase">David
+                        <span class="text-orange-300">Čadež</span></p>
+                    <p class="font-Syne mb-2 tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase">Nova Gorica,
+                        Slovenia</p>
+                    <!-- <p class="font-Syne mb-2 tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase">+386 31 290
+                        128</p> -->
+                    <p class="font-Syne mb-2 tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase">
+                        &#100;&#097;&#118;&#105;&#100;&#046;&#099;&#097;&#100;&#101;&#122;&#056;&#057;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="#what-i-do"
+                               role="menuitem">What I do</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="#skills"
+                               role="menuitem">Skills</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="#projects"
+                               role="menuitem">Projects</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="#education"
+                               role="menuitem">Education</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="#experience"
+                               role="menuitem">Experience</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="#contact"
+                               role="menuitem">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <ul>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="https://github.com/cadezd/"
+                               target="_blank">Github</a></li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="https://linkedin.com/in/david-čadež"
+                               target="_blank">Linked in</a></li>
+                        <li class="mb-2">
+                            <a class="font-Syne tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase underline_animation"
+                               href="https://drive.google.com/file/d/1s3bKdzcL3Y8z1bcEBxo6WMMxILjgEHw8/view"
+                               target="_blank">Résumé</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center">
+                    <p class="font-Syne mt-16 tracking-[.2rem] text-base sm:text-xl md:text-2xl uppercase">
+                        Copyright © 2024 David Čadež.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
