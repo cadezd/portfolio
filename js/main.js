@@ -159,7 +159,7 @@ async function renderEducation() {
         // Add line separator if not the last item
         if (i !== education.length - 1) {
             let line = document.createElement('div');
-            line.setAttribute('class', 'h-full bg-dark-grey-200');
+            line.setAttribute('class', 'h-[2px] w-full bg-dark-grey-200');
             educationContainer.appendChild(line);
         }
     }
@@ -207,7 +207,7 @@ async function renderExperience() {
         // Add line separator if not the last item
         if (i !== experience.length - 1) {
             let line = document.createElement('div');
-            line.setAttribute('class', 'h-full bg-dark-grey-200');
+            line.setAttribute('class', 'h-[2px] w-full bg-dark-grey-200');
             experienceContainer.appendChild(line);
         }
     }
@@ -217,4 +217,3 @@ async function readJSONFile(file) {
     let response = await fetch(file);
     return await response.json();
 }
-
