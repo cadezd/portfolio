@@ -1,6 +1,13 @@
 let openMenuBtn = document.getElementById('open-menu-btn');
 let menu = document.getElementById('menu');
 let menuItems = menu.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+let copyRightYearSpans = document.querySelectorAll(".copyright-year")
+
+
+copyRightYearSpans.forEach((element) => {
+    let year = new Date().getFullYear();
+    element.textContent = year;
+});
 
 openMenuBtn.addEventListener('click', function () {
     openMenuBtn.setAttribute('aria-expanded', 'true');
@@ -109,7 +116,6 @@ async function renderProjects() {
         projectsContainer.appendChild(projectDiv);
     }
 }
-
 
 /* Render education from json file */
 async function renderEducation() {

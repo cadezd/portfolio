@@ -1,12 +1,17 @@
 [
   {
+    "company": "DevRev d.o.o.",
+    "description": "At DevRev d.o.o., I work as a Backend Developer Intern, developing and maintaining backend functionality in Go within an AWS Lambda function that is part of an integration pipeline for data ingestion and processing. My work includes debugging production issues, analyzing logs and execution traces, optimizing data flows, refactoring existing code, improving unit tests, and supporting incident escalation as part of on-call duties.",
+    "image": "../images/companies/devrev.webp"
+  },
+  {
     "company": "Simpos d.o.o.",
-    "description": "At Simpos d.o.o., a motor oil distribution company, I developed programs to speed-up business processes and cut costs, focusing on PDF processing solutions to enhance efficiency.",
+    "description": "At Simpos d.o.o., I developed internal tools for automating business workflows, with a focus on PDF document processing. This included tools for splitting and merging PDF documents based on QR codes, renaming output files according to extracted data, and reducing repetitive manual work in everyday business processes.",
     "image": "../images/companies/simpos.webp"
   },
   {
     "company": "Mapetrol d.o.o.",
-    "description": "At Mapetrol d.o.o., a motor oil manufacturing company, I developed software solutions to optimize business processes and minimize costs, with a focus on PDF processing solutions for heightened productivity.",
+    "description": "At Mapetrol d.o.o., I developed software solutions for automating invoice-related workflows, including scripts for merging PDF invoices by company and generating accounting labels from electronically managed invoice data. These tools helped make document handling more efficient, structured, and less dependent on manual processing.",
     "image": "../images/companies/mapetrol.webp"
   }
 ]
